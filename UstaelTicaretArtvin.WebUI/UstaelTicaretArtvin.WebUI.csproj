@@ -7,16 +7,95 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\401.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\404.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\500.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\assets\demo\chart-area-demo.js" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\assets\demo\chart-bar-demo.js" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\assets\demo\chart-pie-demo.js" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\assets\demo\datatables-demo.js" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\assets\img\error-404-monochrome.svg" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\charts.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\css\styles.css" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\index.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\js\datatables-simple-demo.js" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\js\scripts.js" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\layout-sidenav-light.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\layout-static.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\login.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\password.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\register.html" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\tables.html" />
+    <Content Remove="wwwroot\tema\assets\favicon.ico" />
+    <Content Remove="wwwroot\tema\css\styles.css" />
+    <Content Remove="wwwroot\tema\index.html" />
+    <Content Remove="wwwroot\tema\js\scripts.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\UstaelTicaretArtvin.Service\UstaelTicaretArtvin.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Carousel\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Carousel\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Carousel\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Carousel\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Contacts\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Contacts\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Contacts\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Contacts\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Main\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Products\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Products\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Products\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Products\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <None Include="wwwroot\Img\Acer-logo.svg" />
+    <None Include="wwwroot\Img\asus.svg" />
+    <None Include="wwwroot\Img\lenovo-logo-red.webp" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\401.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\404.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\500.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\charts.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\css\styles.css" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\index.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\js\datatables-simple-demo.js" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\js\scripts.js" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\layout-sidenav-light.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\layout-static.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\login.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\password.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\register.html" />
+    <None Include="wwwroot\startbootstrap-sb-admin-gh-pages\tables.html" />
+    <None Include="wwwroot\tema\assets\favicon.ico" />
+    <None Include="wwwroot\tema\css\styles.css" />
+    <None Include="wwwroot\tema\index.html" />
+    <None Include="wwwroot\tema\js\scripts.js" />
   </ItemGroup>
 
 </Project>
