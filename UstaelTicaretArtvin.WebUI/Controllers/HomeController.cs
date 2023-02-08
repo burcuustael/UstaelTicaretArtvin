@@ -1,21 +1,36 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using UstaelTicaretArtvin.Entities;
+using UstaelTicaretArtvin.Service.Abstract;
 using UstaelTicaretArtvin.WebUI.Models;
 
 namespace UstaelTicaretArtvin.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IService<Product> _service;
+        private readonly IService<Carousel> _serviceCarousel;
+        private readonly IService<Brand> _serviceBrand;
+        private readonly IService<Contact> _serviceContact;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IService<Product> service, IService<Carousel> serviceCarousel, IService<Brand> serviceBrand, IService<Contact> serviceContact)
         {
-            _logger = logger;
+            _service = service;
+            _serviceCarousel = serviceCarousel;
+            _serviceBrand = serviceBrand;
+            _serviceContact = serviceContact;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            return View();
+            var model = new HomePageViewModel()
+            {
+                Carousels = await _serviceCarousel.GetAllAsync(),
+                Products = await _service.GetAllAsync(p=>p.IsHome),
+                Brands = await _serviceBrand.GetAllAsync()
+
+            };
+            return View(model);
         }
 
         public IActionResult Privacy()

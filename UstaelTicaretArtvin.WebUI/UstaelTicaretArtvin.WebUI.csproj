@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\styles.css" />
     <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\401.html" />
     <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\404.html" />
     <Content Remove="wwwroot\startbootstrap-sb-admin-gh-pages\500.html" />
@@ -56,6 +57,10 @@
     <None Include="Areas\Admin\Views\Carousel\Delete.cshtml" />
     <None Include="Areas\Admin\Views\Carousel\Edit.cshtml" />
     <None Include="Areas\Admin\Views\Carousel\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Categories\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Categories\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Categories\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Categories\Index.cshtml" />
     <None Include="Areas\Admin\Views\Contacts\Create.cshtml" />
     <None Include="Areas\Admin\Views\Contacts\Delete.cshtml" />
     <None Include="Areas\Admin\Views\Contacts\Edit.cshtml" />
@@ -70,6 +75,11 @@
     <None Include="Areas\Admin\Views\Users\Delete.cshtml" />
     <None Include="Areas\Admin\Views\Users\Edit.cshtml" />
     <None Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <None Include="Views\Brands\Index.cshtml" />
+    <None Include="Views\Categories\Index.cshtml" />
+    <None Include="Views\Products\Index.cshtml" />
+    <None Include="Views\Products\Search.cshtml" />
+    <None Include="wwwroot\css\styles.css" />
     <None Include="wwwroot\Img\Acer-logo.svg" />
     <None Include="wwwroot\Img\asus.svg" />
     <None Include="wwwroot\Img\lenovo-logo-red.webp" />
