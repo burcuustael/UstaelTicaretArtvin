@@ -33,9 +33,38 @@ namespace UstaelTicaretArtvin.WebUI.Controllers
             return View(model);
         }
 
-        public IActionResult Privacy()
+        [Route("AccessDenied")]
+        public IActionResult AccessDenied()
         {
             return View();
+        }
+
+        [Route("iletisim")]
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+
+
+        [Route("iletisim"), HttpPost]
+        public async Task<IActionResult> ContactUsAsync(Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _serviceContact.AddAsync(contact);
+                    await _serviceContact.SaveChangesAsync();
+                    TempData["Mesaj"] = "<div class='alert alert-success'> Mesajınız Gönderildi. Teşekkürler..</div>";
+                    return RedirectToAction("ContactUs");
+                }
+                catch (Exception)
+                {
+
+                    ModelState.AddModelError("", "Hata Oluştu! Mesajınız Gönderilemedi!");
+                }
+            }
+            return View(contact);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - UstaelTicaretArtvin.WebUI</title>
-    <<!-- Favicon-->
+    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -14,8 +14,8 @@
 <body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="/Home">Ustael Ticaret</a>
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="/">Ustael Ticaret Artvin</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -24,25 +24,20 @@
                     @await Component.InvokeAsync("Categories")
 
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="/iletisim">İletişim</a></li>
-                                     
-                    
                 </ul>
-
                 <form asp-controller="Products" asp-action="Search" method="get" class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                     <div class="input-group">
                         <input name="q" class="form-control" type="text" placeholder="Ara..." aria-label="Ara..." aria-describedby="btnNavbarSearch" />
                         <button class="btn btn-primary" id="btnNavbarSearch" type="submit"><i class="bi bi-search"></i></button>
                     </div>
                 </form>
-
-                <a class="btn btn-outline-primary" href="/Account/SignIn"><i class="bi bi-person"></i> Üye Girişi </a>
-                <a class="btn btn-outline-primary mx-3" href="/Account/SignUp"><i class="bi bi-person"></i> Kayıt Ol </a>
-
-                
-
+                <a class="btn btn-outline-primary" href="/Account/SignIn"><i class="bi bi-person"></i> Üye Girişi</a>
+                <a class="btn btn-outline-primary mx-3" href="/Account/SignUp"><i class="bi bi-person"></i> Kayıt Ol</a>
+               
             </div>
         </div>
     </nav>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
