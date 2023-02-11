@@ -75,8 +75,6 @@
     <None Include="Areas\Admin\Views\Users\Delete.cshtml" />
     <None Include="Areas\Admin\Views\Users\Edit.cshtml" />
     <None Include="Areas\Admin\Views\Users\Index.cshtml" />
-    <None Include="Views\Account\SignIn.cshtml" />
-    <None Include="Views\Account\SignUp.cshtml" />
     <None Include="Views\Brands\Index.cshtml" />
     <None Include="Views\Categories\Index.cshtml" />
     <None Include="Views\Products\Index.cshtml" />

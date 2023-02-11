@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using UstaelTicaretArtvin.Entities;
 using UstaelTicaretArtvin.Service.Abstract;
@@ -6,7 +7,7 @@ using UstaelTicaretArtvin.WebUI.Utils;
 
 namespace UstaelTicaretArtvin.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"),Authorize(Policy ="AdminPolicy")]
     public class CategoriesController : Controller
     {
         private readonly IService<Category> _service;

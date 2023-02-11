@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using UstaelTicaretArtvin.Entities;
 using UstaelTicaretArtvin.Service.Abstract;
 
 namespace UstaelTicaretArtvin.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"),Authorize(Policy ="AdminPolicy")]
     public class ContactsController : Controller
     {
         private readonly IService<Contact> _service;

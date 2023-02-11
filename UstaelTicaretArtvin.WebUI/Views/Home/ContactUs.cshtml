@@ -4,12 +4,13 @@
     ViewData["Title"] = "İletişim";
 }
 
-<h1>İletişim</h1>
-
+<hr />
 
 <div class="row">
     <div class="col-md-4">
         <h4>Bize Mesaj Gönderin</h4>
+        <hr />
+
         <form asp-action="ContactUs">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -37,7 +38,7 @@
                 <input asp-for="Message" class="form-control" />
                 <span asp-validation-for="Message" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group my-3">
                 
                 <button type="button" class="btn btn-primary" onclick="iletisim_formu()"> Gönder </button>
             </div>
@@ -45,8 +46,19 @@
         @Html.Raw(TempData["Mesaj"])
     </div>
 
+
     <div class="col-md-4">   
+
         <h4>Harita</h4>
+        <hr />
+
+
+    </div>
+    
+
+
+    <div class="col-md-4">   
+        <h4>Bize Ulaşın</h4>
         <hr />
         <p>
             Adres :  Çayağzı Mah. Artvin San. Sit. D Blok Artvin Merkez, Artvin
@@ -63,16 +75,14 @@
         </p>
 
         <p>
-            Cep: 	0532 624 12 70
+            Cep: 0532 624 12 70
         </p>
 
     </div>
 
 </div>
 
-<div id="sonuc" class="alert alert-info" style="display: none" >
-
-</div>
+<div id="sonuc" class="alert alert-info" style="display: none" ></div>
 
 @section Scripts {
     <script>

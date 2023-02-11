@@ -13,18 +13,18 @@ namespace UstaelTicaretArtvin.WebUI.Controllers
             _service = service;
         }
 
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
             var model = await _service.GetAllAsync(p => p.IsActive);
             return View(model);
         }
-        public async Task<IActionResult> SearchAsync(string q)
+        public async Task<IActionResult> Search(string q)
         {
             var model = await _service.GetAllAsync(p=>p.IsActive && p.Name.Contains(q));
             return View(model);
         }
 
-        public async Task<IActionResult> DetailsAsync(int id)
+        public async Task<IActionResult> Detail(int id)
         {
             var product = await _service.GetProductByCategoriesBrandsAsync(id);
             var model = new ProductDetailViewModel()
