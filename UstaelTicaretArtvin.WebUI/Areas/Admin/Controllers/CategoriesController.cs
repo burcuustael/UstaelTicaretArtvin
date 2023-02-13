@@ -33,7 +33,7 @@ namespace UstaelTicaretArtvin.WebUI.Areas.Admin.Controllers
         // GET: CategoriesController/Create
         public async Task<ActionResult> CreateAsync()
         {
-            ViewBag.CategoryId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
+            ViewBag.ParentId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace UstaelTicaretArtvin.WebUI.Areas.Admin.Controllers
                 }
             }
 
-            ViewBag.CategoryId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
+            ViewBag.ParentId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
 
             return View(category);
 
@@ -81,13 +81,14 @@ namespace UstaelTicaretArtvin.WebUI.Areas.Admin.Controllers
                     ModelState.AddModelError("", "Hata Oluştu!");
                 }
             }
-            ViewBag.CategoryId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
+            ViewBag.ParentId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
             return View(category);
         }
 
         // GET: CategoriesController/Edit/5
         public async Task<ActionResult> EditAsync(int id)
         {
+            ViewBag.ParentId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
             var model = await _service.FindAsync(id);
             return View(model);
         }
@@ -112,7 +113,7 @@ namespace UstaelTicaretArtvin.WebUI.Areas.Admin.Controllers
                 }
             }
 
-            ViewBag.CategoryId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
+            ViewBag.ParentId = new SelectList(await _service.GetAllAsync(), "Id", "Name");
             return View(category);
         }
 

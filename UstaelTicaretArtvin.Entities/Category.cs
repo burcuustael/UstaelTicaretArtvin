@@ -20,6 +20,16 @@ namespace UstaelTicaretArtvin.Entities
         [Display(Name = "Durum")]
         public bool IsActive { get; set; }
 
+        [Display(Name = "Üst Menüde Göster")]
+        public bool IsTopMenu { get; set; }
+
+        [Display(Name = "Üst Kategori")]
+
+        public int ParentId { get; set; }
+
+        [Display(Name ="Kategori Sıra No")]
+        public int OrderNo { get; set; }
+
         public virtual ICollection<Product>? Products { get; set; }
 
     }
